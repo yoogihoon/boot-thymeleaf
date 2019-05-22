@@ -18,7 +18,7 @@ function fire_ajax_submit() {
         formArray[n['name']] = n['value']; // key - value
     });
 
-    var json =JSON.stringify(formArray)
+    var json =JSON.stringify(formArray);
     console.log(json);
     $.ajax({
         type: 'post',
@@ -27,9 +27,8 @@ function fire_ajax_submit() {
         data: json,
         dataType: 'text',
         success: function (formArray) {
-        	// console.log("콘솔");
-        	 console.log("SUCCESS : ", formArray);
-        	 window.location.href = "/users";
+        	 console.log("SUCCESS : 유기훈 ", formArray);
+        	 window.location.href = "/users"; // get 방식
         	
         },
         error: function (e) {
